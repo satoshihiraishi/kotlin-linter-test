@@ -15,3 +15,9 @@ jobs:
 
       - name: "ktlint"
         uses: "vroy/gha-kotlin-linter@v1"
+        
+      - name: Get date
+        id: info
+        run: |
+          : # Get current date (YYMMDD)
+          echo "::set-output name=date::$(date +'%Y%m%d')"
